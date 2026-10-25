@@ -194,7 +194,7 @@ Options::Options(Paths& aPaths)
     {
         Log::Info("Unknown Game Version, update the mod");
         throw std::runtime_error("Unknown version");
-    }
+    }    
 
     Load();
     Save();
