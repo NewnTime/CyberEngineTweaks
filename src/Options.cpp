@@ -187,8 +187,7 @@ Options::Options(Paths& aPaths)
         if (GameImage.FileVersion != RED4EXT_V1_RUNTIME_VERSION_LATEST)
         {
             const auto [smajor, sminor] = Image::GetSupportedVersion();
-            Log::Error("Unsupported game version! Only {}.{:02d} is supported.", smajor, sminor);
-            throw std::runtime_error("Unsupported version");
+            Log::Warn("Unsupported game version! Only {}.{:02d} is supported. Version check bypassed, expect instability.", smajor, sminor);
         }
     }
     else
